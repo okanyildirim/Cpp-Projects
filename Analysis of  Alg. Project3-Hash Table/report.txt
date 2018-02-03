@@ -1,0 +1,37 @@
+BLG335E, Analysis of Algorithms I, Fall 2016 Project Report 4 
+Name: OKAN YILDIRIM 
+Student ID: 150160537
+
+
+Part A. Questions on Hash Tables (20 points)
+1)	 Why do we use Hash Tables as a data structure in our problems? Please explain briefly. (5 points)
+We use Hash Tables as an effective dictionary in order to do some method such as insert, delete and search fast. Hash tables are largely used dictionaries and databases. It’s worst case running times for searching, inserting and deleting are O(n) and expected times are just O(1).
+
+
+
+2)	 Consider a hash table consisting of M = 11 slots, and suppose nonnegative integer key values are hashed into the table using the hash function h1() :
+int h1 (int key) {
+int x = (key + 7) * (key + 7);
+x = x / 16;
+x = x + key;
+x = x % 11;
+return x;
+}
+Suppose that collisions are resolved by using linear probing. The integer key values listed below are to be inserted, in the order given. Show the home slot (the slot to which the key hashes, before any probing), the probe sequence (if any) for each key, and the final contents of the hash table after the following key values have been inserted in the given order: (10+5 points)
+Key Value	Home Slot	Probe Sequence
+43	1	1
+23	2	2
+1	5	5
+0	3	3
+15	1	1-2-3-4
+31	0	0
+4	0	0-1-2-3-4-5-6
+7	8	8
+11	9	9
+3	9	9-10
+
+Final Hash Table:
+Slot	0	1	2	3	4	5	6	7	8	9	10
+Contents	31	43	23	0	15	1	4		7	11	3
+Part B. Implementation and Report (80 points)
+Required explanations are done on 150160537.cpp with comment line.
