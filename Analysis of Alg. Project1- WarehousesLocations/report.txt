@@ -1,0 +1,20 @@
+ANALYSIS OF ALGORITHMS I
+PROJECT I REPORT
+a.	Warehouses’ x axis and y axis are given randomly in warehouselocations.txt file, thus average cases are used for each sorting algorithms and searching algorithm. Best cases or worst cases are not acceptable for our problem.
+Insertion Sort => O(n2)
+Merge Sort =>O(n*logn)
+Linear Search =>O(n)
+b.	
+x axis=0 
+y axis=0 (origin)		INSERTION SORT		MERGE SORT	LINEAR SEARCH
+N                 K	1	2	10	N/2	1	2	10	N/2	1	2	10	N/2
+10	0	0	0	0	0	0	0	0	0	0	0	0
+100	0	0	0	0	0	0	0	0	0	0	0	0
+1000	0.01	0.01	0.012	0.011	0.001	0.001	0.001	0.001	0.019	0.016	0.017	0.015
+1000000	9452.07	9020.88	9054.24	7709.27	1.158	1.159	1.19	1.172	0.004	0.005	0.005	1765,4
+
+c.	All algorithms’ running times depend on input size and for N=10 and 100 my execution shows an insensitive result since they are too small. Input size N=1000 is also small enough for each algorithms and there is no big difference between them. However, insertion sort is slower than others relatively because insertion sort algorithm is usable for small input size. Differences are seen easily for N=1000000 that is enough big. It is inevitable result that insertion sort is too slow for large input size. Merge sort is divide and conquer type algorithm and usable for large input size. K value is no matter for not only insertion sort but also merge sort. On the other hand, K is a cornerstone for linear search. Actually, we use extra algorithm for finding K closest warehouse except linear search algorithm: Finding Max Algorithm that is directly depends on K value. Thus, linear search algorithm is usable for smaller K value, yet larger N value.
+In sum up:
+?	Insertion sort running time only depends on N, not K and it is usable for only smaller N values.
+?	Merge sort running time only depends on N, not K and it is faster than insertion sort. Merge sort also usable for too larger N values.
+?	Linear search running time depends on both K and N. It is faster than merge sort in terms of larger N values, yet the larger K value gets the larger running time at the same time.
